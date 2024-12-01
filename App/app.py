@@ -6,63 +6,7 @@ from PIL import Image as PILImage
 
 load_dotenv()
 
-server = 'azureopenai'
-model = "gpt-4o"
-model_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-
-# iterations = 40
-
-# print("Creating graph and compiling workflow...")
-# graph = create_graph(server=server, model=model, model_endpoint=model_endpoint)
-# workflow = compile_workflow(graph)
-# print("Graph and workflow created.")
-
-# try:
-#     # Save the image as a PNG file
-#     mermaid_image = workflow.get_graph().draw_mermaid_png()
-#     image_path = "workflow_graph.png"
-    
-#     with open(image_path, "wb") as f:
-#         f.write(mermaid_image)
-
-#     print(f"Graph saved as {image_path}.")
-
-# except Exception as e:
-#     print(f"Error generating LangGraph visualization: {e}")
-
-# if __name__ == "__main__":
-#     verbose = False
-
-#     while True:
-#         query = input("Please enter your research question (or type 'view' to see the graph, 'exit' to quit): ")
-        
-#         if query.lower() == "exit":
-#             break
-        
-#         if query.lower() == "view":
-#             try:
-#                 img = PILImage.open(image_path)
-#                 img.show()
-#             except Exception as e:
-#                 print(f"Error opening the image: {e}")
-#             continue
-
-#         # Process research questions
-#         dict_inputs = {"research_question": query}
-#         limit = {"recursion_limit": iterations}
-
-#         for event in workflow.stream(dict_inputs, limit):
-#             if verbose:
-#                 print("\nState Dictionary:", event)
-#             else:
-#                 print("\n")
-
-
-
-
 import streamlit as st
-
-
 
 iterations = 40
 

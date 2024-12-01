@@ -10,7 +10,7 @@ from langgraph_module.state import AgentGraphState
 load_dotenv()
 
 
-#config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml')
+
 
 
 def format_results(organic_results):

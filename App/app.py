@@ -6,8 +6,8 @@ from PIL import Image as PILImage
 import streamlit as st
 
 load_dotenv()
-server = 'azureopenai'
-model = "gpt-4o"
+server = 'give your llm model like-azureopenai,gemini.....'
+model = "Give your model name"
 model_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
 
 

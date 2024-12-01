@@ -6,24 +6,24 @@ import os
 load_dotenv()
 
 def get_open_ai():
-    GPT_DEPLOYMENT_NAME = "gpt-4o"
+    GPT_DEPLOYMENT_NAME = "give your model"
 
     llm = AzureChatOpenAI(
         azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
         api_version=os.getenv("OPENAI_API_VERSION"),
-        model="gpt-4o",
+        model="give your model name",
         azure_deployment=GPT_DEPLOYMENT_NAME,
     )
 
     return llm
 
 def get_open_ai_json():
-    GPT_DEPLOYMENT_NAME = "gpt-4o"
+    GPT_DEPLOYMENT_NAME = "Give your model"
 
     llm = AzureChatOpenAI(
         azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
         api_version=os.getenv("OPENAI_API_VERSION"),
-        model="gpt-4o",
+        model="give your model name",
         azure_deployment=GPT_DEPLOYMENT_NAME,
         model_kwargs={"response_format": {"type": "json_object"}},
     )

@@ -3,10 +3,14 @@ from langgraph_module.graph import create_graph, compile_workflow
 from dotenv import load_dotenv
 import os
 from PIL import Image as PILImage
+import streamlit as st
 
 load_dotenv()
+server = 'azureopenai'
+model = "gpt-4o"
+model_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
 
-import streamlit as st
+
 
 iterations = 40
 

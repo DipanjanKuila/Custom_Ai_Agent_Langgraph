@@ -5,7 +5,6 @@ from langgraph_module.state import AgentGraphState
 from langchain_core.messages import HumanMessage
 
 def is_garbled(text):
-    # A simple heuristic to detect garbled text: high proportion of non-ASCII characters
     non_ascii_count = sum(1 for char in text if ord(char) > 127)
     return non_ascii_count > len(text) * 0.3
 
